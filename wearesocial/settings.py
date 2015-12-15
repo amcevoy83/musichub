@@ -15,7 +15,7 @@ import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-os.environ['DJANGO_SETTINGS_MODULE'] = 'wearesocial.settings'
+DJANGO_SETTINGS_MODULE = 'wearesocial.settings'
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
