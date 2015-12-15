@@ -29,5 +29,4 @@ urlpatterns = [
     url(r'^login/$','accounts.views.login', name='login'),
     url(r'^logout/$','accounts.views.logout', name='logout'), ##removed two // at the start of the logout regex
     url(r'^profile/$', 'accounts.views.profile', name='profile'),
-]+ static(settings.MEDIA_URL, dcument_root= settings.MEDIA_ROOT)
-+ static(settings.STATIC_URL, document_root = settings.STATIC_ROOT)
+] + static(settings.MEDIA_URL, dcument_root= settings.MEDIA_ROOT) + static(settings.STATIC_URL, document_root = settings.STATIC_ROOT)
