@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3>Your Account Details</h3>
+    <p><b>Email:</b> {{ user.email }}</p>
+    <p><b>Last Logged In:</b> {{ login_humanize }}</p>
+    <p><b>Subscription Expires:</b> {{ subscription_humanize }}</p>
+
+{% endblock %}
