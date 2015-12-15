@@ -25,6 +25,6 @@ class User(AbstractUser):
 
     ##add our new stripe_id field here as a CharField so that when a reg form is saved, we retain our new token/id
     stripe_id = models.CharField(max_length=40, default='')
-    subscription_end = models.DateTimeField(default=timezone.now())
+    subscription_end = models.DateTimeField(default=timezone.now)
 
     objects = AccountUserManager()

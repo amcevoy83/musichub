@@ -142,6 +142,25 @@ STRIPE_SECRET = os.getenv('STRIPE_SECRET', 'sk_test_rP1gTjriAoHxeX4nygRs44dh')
 
 TEMPLATE_DEBUG = False
 
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'file': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': '%s/debug.log' % BASE_DIR,
+        },
+    },
+    'loggers': {
+        'django.request': {
+            'handlers': ['file'],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+    },
+}
+
 try:
     from local_settings import *
 except:
