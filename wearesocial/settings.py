@@ -86,8 +86,8 @@ WSGI_APPLICATION = 'wearesocial.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'wearesocial_db',
-        'USER': 'WAS_tester',
+        'NAME': 'testdb',
+        'USER': 'testuser',
         'PASSWORD': 'password',
         'HOST': 'localhost',
         'PORT':'5432'
