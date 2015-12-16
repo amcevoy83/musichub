@@ -12,8 +12,7 @@ import django
 django.setup()
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault["DJANGO_SETTINGS_MODULE"]= "wearesocial.settings"
-
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "wearesocial.settings")
 #settings.configure()
 
 application = get_wsgi_application()
