@@ -21,6 +21,7 @@ class AccountUserManager(UserManager):
         return user
 
 
+
 class User(AbstractUser):
 
     ##add our new stripe_id field here as a CharField so that when a reg form is saved, we retain our new token/id
