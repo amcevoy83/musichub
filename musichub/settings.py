@@ -90,8 +90,8 @@ WSGI_APPLICATION = 'musichub.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'testdb',
-        'USER': 'testuser',
+        'NAME': 'musichubdb',
+        'USER': 'musichubuser',
         'PASSWORD': 'password',
         'HOST': 'localhost',
         'PORT':'5432'
