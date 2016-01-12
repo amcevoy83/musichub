@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>We Are Social</title>
+    <title>Music Hub Ireland</title>
     <meta name="viewport" content = "width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -11,57 +11,54 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.6/cerulean/bootstrap.min.css">
 
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
-<link rel="stylesheet" href="{%  static "css/style.css" %}">
+    <link rel="stylesheet" href="{%  static "css/style.css" %}">
+    <link rel="stylesheet" href="{%  static "css/font-awesome-4.5.0/font-awesome-4.5.0/css/font-awesome.css" %}">
 
+
+    {%  block head_js %} {% endblock head_js %}
 </head>
 <body>
+<div class="background"></div>
+{#<div class="maincontainer"></div>#}
+{#<div class="maincontainer2"></div>#}
+{#<div class="maincontainer3"></div>#}
 
-<div class="maincontainer"></div>
-<div class="maincontainer2"></div>
-<div class="maincontainer3"></div>
-
-    <div class="masthead">
-
-    <h3>[LOGO HEADER]</h3>
-    </div>
+<div class="topnav">
+    <h3><b>MUSIC HUB</b>  IRELAND</h3>
     {% if user.is_authenticated %}
                 {% include 'nav_yes.html' %}
             {% else %}
                 {% include 'nav_no.html' %}
             {% endif %}
+</div>
+<div class="whitebox">
 
-<div class="container-narrow">
-
-
-    <div class="container-narrow">
     {% if messages %}
-<div class="alert alert-success">
+    <div class="alert alert-success">
 
-<p><div class="btn close" >CLOSE X</div></p>
-<div class="messages">
-    {% for message in messages %}
-    {{ message }}
-    {% endfor %}
+            <p><div class="btn close" >CLOSE X</div></p>
+            <div class="messages">
+                {% for message in messages %}
+                {{ message }}
+                {% endfor %}
 
-</div>
-</div>
-{% endif %}
+            </div>
+    </div>
+    {% endif %}
         {% block content %}
 
         {% endblock %}
-    </div>
+</div>
 
 {#    <div class="footer">#}
 {#        <p>Copyright 2015 <a href ="http://www.awwwards.com">Get Inspired</a></p>#}
 {#    </div>#}
 
-</div>
-</div>
 </body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/js/bootstrap.min.js"></script>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js" type="text/javascript"></script>
     <script src="{%  static "js/jquery_main.js" %}"></script>
-  {% block head_js %}{% endblock %}
+{#  {% block head_js %}{% endblock %}#}
 </html>
