@@ -7,10 +7,8 @@ class Subject(models.Model):
     name = models.CharField(max_length=254)
     description = HTMLField()
 
-
     def __unicode__(self):
         return self.name
-
 
 class Thread(models.Model):
     name = models.CharField(max_length=254)

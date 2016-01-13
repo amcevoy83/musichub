@@ -93,11 +93,11 @@ def register(request):
 
                 user = auth.authenticate(email=request.POST.get('email'),
                                         password = request.POST.get('password1'))
-            if user:
-                auth.login(request,user)
+                if user:
+                    auth.login(request,user)
 
-                messages.success(request, "You have successfully registered. Your customer id number is")
-                return redirect(reverse('profile'))
+                    messages.success(request, "You have successfully registered. Your customer id number is")
+                    return redirect(reverse('profile'))
             else:
                 messages.error(request,'Unable to log you in at this time!')
         else:
