@@ -15,31 +15,31 @@ class UserRegistrationForm(UserCreationForm):
         widget=forms.PasswordInput
     )
 
-    credit_card_number = forms.CharField(
-        label = 'Credit Card Number'
-    )
-
-    cvv = forms.CharField(
-        label = 'Security Code (CVV)'
-    )
-
-    MONTH_CHOICES = [(i, i,)for i in xrange(1,13)]
-    YEAR_CHOICES = [(i,i,)for i in xrange(2015,2036)]
-
-    expiry_month = forms.ChoiceField(
-        label = 'Month',
-        choices = MONTH_CHOICES
-    )
-
-    expiry_year = forms.ChoiceField(
-        label="Year",
-        choices = YEAR_CHOICES
-    )
-
-    #this is hiddent as we are using it only internally to store the token returned by stripe later
-    stripe_id = forms.CharField(
-        widget = forms.HiddenInput
-    )
+                                                                            # credit_card_number = forms.CharField(
+                                                                            #     label = 'Credit Card Number'
+                                                                            # )
+                                                                            #
+                                                                            # cvv = forms.CharField(
+                                                                            #     label = 'Security Code (CVV)'
+                                                                            # )
+                                                                            #
+                                                                            # MONTH_CHOICES = [(i, i,)for i in xrange(1,13)]
+                                                                            # YEAR_CHOICES = [(i,i,)for i in xrange(2015,2036)]
+                                                                            #
+                                                                            # expiry_month = forms.ChoiceField(
+                                                                            #     label = 'Month',
+                                                                            #     choices = MONTH_CHOICES
+                                                                            # )
+                                                                            #
+                                                                            # expiry_year = forms.ChoiceField(
+                                                                            #     label="Year",
+                                                                            #     choices = YEAR_CHOICES
+                                                                            # )
+                                                                            #
+                                                                            # #this is hiddent as we are using it only internally to store the token returned by stripe later
+                                                                            # stripe_id = forms.CharField(
+                                                                            #     widget = forms.HiddenInput
+                                                                            # )
     class Meta:
         # here we are only showing what fields we want to ie. the email and passwords, we're exluding usernanem
         model = User
