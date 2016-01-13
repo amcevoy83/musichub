@@ -43,7 +43,7 @@ class UserRegistrationForm(UserCreationForm):
     class Meta:
         # here we are only showing what fields we want to ie. the email and passwords, we're exluding usernanem
         model = User
-        fields = ['email', 'password1', 'password2', 'stripe_id']
+        fields = ['email', 'password1', 'password2']
         exclude = ['username']
 
 
