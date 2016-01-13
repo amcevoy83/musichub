@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '^n68uy760rq364hpl3h4tkc^3$!w1p$ur#d@13gc(0+om=7uix'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -90,8 +90,8 @@ WSGI_APPLICATION = 'musichub.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'musichubdb',
-        'USER': 'musichubuser',
+        'NAME': 'testdb',
+        'USER': 'testuser',
         'PASSWORD': 'password',
         'HOST': 'localhost',
         'PORT':'5432'
