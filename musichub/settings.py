@@ -90,8 +90,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'musicdb',
-        'USER': 'musicuser',
-        'PASSWORD': 'musicpw',
+        'USER': 'music',
+        'PASSWORD': 'password',
         'HOST': 'localhost',
         'PORT':'5432'
     }
@@ -152,6 +152,6 @@ LOGGING = {
 }
 
 try:
-    from local_settings import *
+    from old_local_settings import *
 except:
     pass
