@@ -15,7 +15,7 @@
 {% load bootstrap_tags %}
 {% block content %}
 <form role="form" method="post" id="register-form" action="{% url 'register' %}">
-    <legend>Create a new account</legend>
+    <legend>CREATE A NEW ACCOUNT</legend>
     {% csrf_token %}
     {{  form| as_bootstrap }}
     <div class="form-group">

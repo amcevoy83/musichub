@@ -6,15 +6,17 @@
 </div>
 
 <div class="col-md-12">
-    {% if user.is_authenticated %}
-    <p>
-        <a href="{%  url 'new_thread' subject.id %}" class="btn btn-primary">New Thread</a>
-    </p>
-    {% endif %}
+
 
     {%  for thread in subject.threads.all %}
     {% include "thread_item.html" %}
     {% endfor %}
+
+    {% if user.is_authenticated %}
+    <p>
+        <a href="{%  url 'new_thread' subject.id %}" class="btn btn-primary">Creat new thread ></a>
+    </p>
+    {% endif %}
 
 </div>
 {% endblock %}
