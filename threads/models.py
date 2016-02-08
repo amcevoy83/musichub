@@ -1,7 +1,8 @@
 from django.db import models
 from tinymce.models import HTMLField
-from musichub import settings
 from django.utils import timezone
+from musichub.musichub import settings
+
 
 class Subject(models.Model):
     name = models.CharField(max_length=254)

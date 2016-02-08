@@ -47,6 +47,7 @@ INSTALLED_APPS = (
     'tinymce',
     'emoticons',
     'threads',
+    'musichub',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -152,6 +153,6 @@ LOGGING = {
 }
 
 try:
-    from local_settings import *
+    from old_local_settings import *
 except:
     pass
